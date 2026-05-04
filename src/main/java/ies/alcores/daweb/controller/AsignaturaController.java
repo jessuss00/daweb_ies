@@ -23,7 +23,7 @@ public class AsignaturaController {
         return ResponseEntity.ok(this.asignaturaService.findAll());
     }
 
-    @GetMapping
+    @GetMapping("{id}")
     public ResponseEntity<Asignatura> findOne(@PathVariable("id") final long id){
         return this.asignaturaService.findById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }

@@ -2,6 +2,7 @@ package ies.alcores.daweb.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,16 +12,20 @@ import lombok.RequiredArgsConstructor;
 @Data
 @Entity
 @NoArgsConstructor(force = true)
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class Matricula {
 
     @Id
-    private final long id;
+    private long id;
+    private int curso;
+    private double notaMedia;
 
     @ManyToOne
-    private final Alumno idAlumno;
+    @JoinColumn(name = "id_alum")
+    private Alumno alumno;
 
     @ManyToOne
-    private final Asignatura idAsignatura;
+    @JoinColumn(name = "id_asig")
+    private Asignatura asignatura;
 
 }

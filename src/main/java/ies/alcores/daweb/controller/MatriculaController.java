@@ -23,7 +23,7 @@ public class MatriculaController {
         return ResponseEntity.ok(this.matriculaService.findAll());
     }
 
-    @GetMapping("{id")
+    @GetMapping("{id}")
     public ResponseEntity<Matricula> findOne(@PathVariable("id") final long id){
         return this.matriculaService.findById(id).map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
