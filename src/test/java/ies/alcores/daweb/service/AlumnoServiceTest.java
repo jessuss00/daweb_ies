@@ -3,6 +3,7 @@ package ies.alcores.daweb.service;
 import ies.alcores.daweb.model.Alumno;
 import ies.alcores.daweb.repository.AlumnoRepository;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 
@@ -12,7 +13,9 @@ import java.util.Optional;
 import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+@ExtendWith(org.mockito.junit.jupiter.MockitoExtension.class)
 public class AlumnoServiceTest {
+
     @Mock
     private AlumnoRepository alumnoRepository;
 
