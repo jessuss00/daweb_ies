@@ -21,11 +21,11 @@ CREATE TABLE Asignatura(
 );
 
 CREATE TABLE Matricula(
+    id_mat int primary key,
 	id_alum int,
 	id_asig int,
 	curso int,
 	nota_media decimal(16,2),
-	constraint pk_matricula primary key (id_alum, id_asig, curso),
 	constraint fk_mat_alum foreign key (id_alum) references Alumno(id),
 	constraint fk_mat_asig foreign key (id_asig) references Asignatura(id)
 );
