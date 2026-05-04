@@ -4,16 +4,19 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 @Data
 @Entity
-@AllArgsConstructor
+@NoArgsConstructor(force = true)
+@RequiredArgsConstructor
 public class Alumno {
 
     @Id
-    private Long id;
-    private String nombre;
-    private String apellidos;
-    private String ipasen;
+    private final Long id;
+    private final String nombre;
+    private final String apellidos;
+    private final String ipasen;
 
 }

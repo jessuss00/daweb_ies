@@ -5,19 +5,22 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 @Data
 @Entity
-@AllArgsConstructor
+@NoArgsConstructor(force = true)
+@RequiredArgsConstructor
 public class Matricula {
 
     @Id
-    private Long id;
+    private final Long id;
 
     @ManyToOne
-    private Alumno idAlumno;
+    private final Alumno idAlumno;
 
     @ManyToOne
-    private Asignatura idAsignatura;
+    private final Asignatura idAsignatura;
 
 }
