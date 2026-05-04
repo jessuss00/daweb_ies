@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 public class Profesor {
 
     @Id
-    private final Long id;
+    private final long id;
     private final String nombre;
     private final String apellidos;
     private final String especialidad;

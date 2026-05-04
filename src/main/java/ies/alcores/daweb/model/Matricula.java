@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 public class Matricula {
 
     @Id
-    private final Long id;
+    private final long id;
 
     @ManyToOne
     private final Alumno idAlumno;

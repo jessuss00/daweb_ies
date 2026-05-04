@@ -15,7 +15,7 @@ import lombok.RequiredArgsConstructor;
 public class Asignatura {
 
     @Id
-    private final Long id;
+    private final long id;
     private final String nombre;
     private final int horas;
 

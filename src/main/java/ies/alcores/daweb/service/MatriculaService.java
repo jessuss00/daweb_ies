@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @AllArgsConstructor
@@ -17,5 +18,9 @@ public class MatriculaService {
 
     public List<Matricula> findAll(){
         return this.matriculaRepository.findAll();
+    }
+
+    public Optional<Matricula> findById(final long id){
+        return this.matriculaRepository.findById(id);
     }
 }
