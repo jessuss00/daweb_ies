@@ -16,7 +16,7 @@ import lombok.RequiredArgsConstructor;
 public class Matricula {
 
     @Id
-    private long id;
+    private long idMat;
     private int curso;
     private double notaMedia;
 
