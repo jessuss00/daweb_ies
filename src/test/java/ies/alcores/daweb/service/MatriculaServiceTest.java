@@ -58,7 +58,7 @@ class MatriculaServiceTest {
 
         // Then
         assertTrue(result.isPresent());
-        assertEquals(1L, result.get().getId());
+        assertEquals(1L, result.get().getIdMat());
         verify(matriculaRepository).findById(1L);
     }
 
