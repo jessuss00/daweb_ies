@@ -1,15 +1,15 @@
 spring:
   datasource:
-    url: jdbc:postgresql://dpg-d7sd2i3bc2fs73ec1lvg-a.ohio-postgres.render.com:5432/instituto_6cqe
-    username: instituto_6cqe_user
-    password: T7AWFYUV5Dt2svRZ2VbvuPuG1mkg5MDG
+    url: jdbc:postgresql://dpg-d80paa50lvsc738u5e9g-a.frankfurt-postgres.render.com:5432/alumnos_icva
+    username: root
+    password: BiQqpwPe9QneEB3ueE95Na3xsL37sMg5
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
       ddl-auto: update   # create | update | validate | none
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
-        format_sql: true
+        format_sql: false
     open-in-view: false
